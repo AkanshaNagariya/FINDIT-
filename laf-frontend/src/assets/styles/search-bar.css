@@ -1,0 +1,28 @@
+@import './variables.css';
+
+.search-form {
+  background-color: white;
+  padding: var(--space-md);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.search-fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: var(--space-sm);
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+.search-btn {
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  .search-fields {
+    grid-template-columns: 1fr;
+  }
+}

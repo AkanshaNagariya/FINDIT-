@@ -1,0 +1,34 @@
+@import './variables.css';
+
+.not-found-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  background-color: var(--light);
+}
+
+.not-found-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--space-xl);
+}
+
+.not-found-content h1 {
+  font-size: 6rem;
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  line-height: 1;
+}
+
+.not-found-content h2 {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-md);
+  color: var(--dark);
+}
+
+.not-found-content p {
+  margin-bottom: var(--space-xl);
+  color: var(--gray);
+}

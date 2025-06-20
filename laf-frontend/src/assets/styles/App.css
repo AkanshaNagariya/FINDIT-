@@ -1,0 +1,122 @@
+@import './variables.css';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: var(--space-lg) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--space-xs) var(--space-md);
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  font-weight: 500;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: var(--light);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--space-xs);
+  border: 1px solid var(--gray-light);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-sm);
+  transition: var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(235, 94, 40, 0.2);
+}
+
+.alert {
+  padding: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  border-radius: var(--radius-sm);
+}
+
+.alert-danger {
+  background-color: #F8D7DA;
+  color: #721C24;
+  border: 1px solid #F5C6CB;
+}
+
+.alert-success {
+  background-color: #D4EDDA;
+  color: #155724;
+  border: 1px solid #C3E6CB;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.spinner {
+  border: 3px solid rgba(235, 94, 40, 0.2);
+  border-top: 3px solid var(--primary);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 var(--space-sm);
+  }
+}

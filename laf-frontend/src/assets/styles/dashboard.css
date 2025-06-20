@@ -1,0 +1,36 @@
+@import './variables.css';
+
+.dashboard-page {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: var(--space-lg) 0;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .dashboard-page {
+    flex-direction: column;
+  }
+  
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-md);
+  }
+}

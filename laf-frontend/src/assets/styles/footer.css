@@ -1,0 +1,81 @@
+.footer {
+  background-color: #252422;
+  color: #FFFCF2;
+  padding: 2rem 0;
+  margin-top: auto;
+}
+@import './variables.css';
+
+.app-footer {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: var(--space-xl) 0;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.footer-section {
+  margin-bottom: var(--space-md);
+}
+
+.footer-heading {
+  color: var(--primary);
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary);
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: var(--space-sm);
+}
+
+.footer-links a {
+  color: var(--light);
+  text-decoration: none;
+  transition: var(--transition-fast);
+}
+
+.footer-links a:hover {
+  color: var(--primary-light);
+  padding-left: var(--space-xs);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright {
+  font-size: var(--text-sm);
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}

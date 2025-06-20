@@ -1,0 +1,153 @@
+@import './variables.css';
+
+:root {
+  --primary: #EB5E28;
+  --bg-light: #FFFCF2;
+  --text-dark: #252422;
+  --text-gray: #403D39;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+}
+
+.btn {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: var(--spacing-xs);
+  border: 1px solid var(--gray-medium);
+  border-radius: var(--border-radius-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(235, 94, 40, 0.2);
+}
+
+.alert {
+  padding: var(--spacing-xs);
+  margin-bottom: var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+}
+
+.alert-danger {
+  background-color: #F8D7DA;
+  color: #721C24;
+  border: 1px solid #F5C6CB;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: var(--spacing-md) 0;
+  box-shadow: var(--shadow-md);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.app-name {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+}
+
+.nav-menu {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.nav-link {
+  color: var(--text-light);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-light);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+  padding: var(--spacing-md) 0;
+  text-align: center;
+  margin-top: var(--spacing-xl);
+}
+/* Add to global.css */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Ensure main content pushes footer down */
+.main-content {
+  flex: 1;
+}
+
+.navbar {
+  background-color: var(--text-dark);
+}

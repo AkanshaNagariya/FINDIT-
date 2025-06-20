@@ -1,0 +1,68 @@
+@import './variables.css';
+
+.app-header {
+  background-color: var(--dark);
+  color: var(--light);
+  padding: var(--space-md) 0;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--light);
+}
+
+.logo-icon {
+  font-size: var(--text-xl);
+  margin-right: var(--space-sm);
+}
+
+.app-name {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.nav-link {
+  color: var(--light);
+  text-decoration: none;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--primary-light);
+}
+
+@media (max-width: 576px) {
+  .app-name {
+    display: none;
+  }
+  
+  .nav-menu {
+    gap: var(--space-sm);
+  }
+}

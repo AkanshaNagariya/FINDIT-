@@ -1,0 +1,36 @@
+@import './variables.css';
+
+.profile-page {
+  display: flex;
+  min-height: calc(100vh - 60px);
+}
+
+.profile-content {
+  flex: 1;
+  padding: var(--space-lg) 0;
+}
+
+.profile-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: white;
+  padding: var(--space-lg);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+}
+
+.form-actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (max-width: 768px) {
+  .profile-page {
+    flex-direction: column;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+  }
+}
